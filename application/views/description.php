@@ -40,6 +40,7 @@
 	    	}
 	    </style>
 </head>
+
 <body>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
@@ -53,34 +54,60 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Authentically Ethnic</a>
-          <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Products</a></li>
-          </ul>
+          <ul class="nav navbar-nav navbar-left">  </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Log Off</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+        	<ul class="nav navbar-nav navbar-right">
+						<a class="navbar-brand" href="#">Shopping Cart()</a>
+        	</ul>
         </div>
       </div>
-    </nav>
-	<a href="">Go Back</a>
+  </nav>
+
+		<a class="navbar-brand" href="#">Go Back</a>
+
 	<div id='product' class='container'>
-		<h2>Product Name</h2>
-		<p>description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. vdescription of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. </p>
-		<form>
-			<select>
-			  <option>1($20)</option>
-			  <option>2($40)</option>
-			  <option>3($60)</option>
-			  <option>4($80)</option>
-			</select>
-			<input type='submit' value='Buy'>
-		</form>
+		<div class = "row">
+			<div class="col-sm-12">
+				<h2>Product Name</h2>
+			</div>
+			<div class="col-sm-6">
+				<h5>Insert Picture Here</h5>
+			</div>
+			<div class="col-sm-6">
+			<p>description of product. description of product. description of product. 				description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. vdescription of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. </p>
+				<form>
+					<select>
+					  <option>1($20)</option>
+					  <option>2($40)</option>
+					  <option>3($60)</option>
+					  <option>4($80)</option>
+					</select>
+					<input type='submit' value='Buy'>
+				</form>
+			</div>
+			<div class = "col-sm-12">
+				<h4>Similar Items</h4>
+			<div class = "col-sm-2">
+				<h5>BOXES</h5>
+			</div>
+			<div class = "col-sm-2">
+				<h5>BOXES</h5>
+			</div>
+			<div class = "col-sm-2">
+				<h5>BOXES</h5>
+			</div>
+			<div class = "col-sm-2">
+				<h5>BOXES</h5>
+			</div>
+			<div class = "col-sm-2">
+				<h5>BOXES</h5>
+			</div>
+			<div class = "col-sm-2">
+				<h5>BOXES</h5>
+			</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
