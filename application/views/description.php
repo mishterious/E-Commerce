@@ -63,9 +63,7 @@
         </div>
       </div>
   </nav>
-
 		<a class="navbar-brand" href="#">Go Back</a>
-
 	<div id='product' class='container'>
 		<div class = "row">
 			<div class="col-sm-12">
@@ -76,7 +74,7 @@
 			</div>
 			<div class="col-sm-6">
 			<p>description of product. description of product. description of product. 				description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. vdescription of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. </p>
-				<form action='/Description/buy' method='post'>
+				<form action='/process/cart' method='post'>
 					<select>
 					  <option>1($20)</option>
 					  <option>2($40)</option>

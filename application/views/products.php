@@ -164,9 +164,8 @@
  				</div>
 
         <div class="thumbnail">
-            <!--      <img data-src="holder.js/300x300" alt="...">
--->       <div class="caption">
-              <h3>PRODUCT</h3>
+         <div class="caption">
+             <a href="/process/description"><h3>PRODUCT</h3></a> 
           </div>
         </div>
         <div class="col-sm-6 col-md-4">
