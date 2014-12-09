@@ -16,7 +16,7 @@
 
 	    <link rel="icon" href="../../favicon.ico">
 
-	    <title>Signin Template for Bootstrap</title>
+	    <title>Edit Product</title>
 
 	    <!-- Bootstrap core CSS -->
 	    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@
 			        <span class="icon-bar"></span>
 			      </button>
 			      <a class="navbar-brand" href="#">Authentically Ethnic</a>
-			      <ul class="nav navbar-nav navbar-left">           
+			      <ul class="nav navbar-nav navbar-left">
 			        <li><a href="#">Orders</a></li>
 			        <li><a href="#">Products</a></li>
 			      </ul>
@@ -97,7 +97,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label>Description</label>
-				    <textarea class="form-control" rows="3"></textarea>			  
+				    <textarea class="form-control" rows="3"></textarea>
 				  </div>
 					<select>
 					  <option value="volvo">Shirt</option>
@@ -118,13 +118,6 @@
 				</form>
 			  </div>
 			</div>
-		</div>	
-	</body>	
+		</div>
+	</body>
 </html>
-
-
-
-
-
-
-

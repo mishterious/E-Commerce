@@ -18,7 +18,7 @@
 
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Inventory</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Authentically Ethnic</a>
-          <ul class="nav navbar-nav navbar-left">           
+          <ul class="nav navbar-nav navbar-left">
             <li><a href="#">Orders</a></li>
             <li><a href="#">Products</a></li>
           </ul>
@@ -95,7 +95,7 @@
 				<td>34234</td>
 				<td>433453</td>
 				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>	  
+			</tr>
 			<tr>
 				<td></td>
 				<td>3</td>
@@ -103,7 +103,7 @@
 				<td>34234</td>
 				<td>433453</td>
 				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>	  
+			</tr>
 			<tr>
 				<td></td>
 				<td>4</td>
@@ -111,7 +111,7 @@
 				<td>34234</td>
 				<td>433453</td>
 				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>	  
+			</tr>
 			<tr>
 				<td></td>
 				<td>4</td>
@@ -119,7 +119,7 @@
 				<td>34234</td>
 				<td>433453</td>
 				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>	  
+			</tr>
 			<tr>
 				<td></td>
 				<td>5</td>
@@ -127,7 +127,7 @@
 				<td>34234</td>
 				<td>433453</td>
 				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>	  	  			
+			</tr>
 		</table>
 		<nav>
 		  <ul class="pagination">
@@ -140,6 +140,6 @@
 		    <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
 		  </ul>
 		</nav>
-	</div>	
+	</div>
 </body>
 </html>

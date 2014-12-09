@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Products</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
  	<style>
 
  	*{/*
- 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+ 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
  	 		font-weight: 300;*/
     font-family: 'Playfair Display SC', serif;
   /*  font-family: 'Raleway', sans-serif;
@@ -75,7 +75,7 @@
  	{
  		padding: 15px;
  	}
- 	.btn-custom 
+ 	.btn-custom
  	{
 
  	}
@@ -111,7 +111,7 @@
 
   #title
   {
-    text-align: center; 
+    text-align: center;
     font-size: 75px;
 /*  font-family: 'Raleway', sans-serif;*/
     font-family: 'Josefin Slab', serif;
@@ -125,7 +125,7 @@
     color: black;*/
   }
 
-  #link{  
+  #link{
     width: 120px;
   }
 
@@ -162,7 +162,7 @@
           <h1 id ="fdeal">Featured Deal</h1>
 		  		</div>
  				</div>
-        
+
         <div class="thumbnail">
             <!--      <img data-src="holder.js/300x300" alt="...">
 -->       <div class="caption">
@@ -184,7 +184,7 @@
                 <h3>PRODUCT</h3>
               </div>
           </div>
-        </div> 
+        </div>
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <!--       <img data-src="holder.js/300x300" alt="..."> -->
@@ -192,7 +192,7 @@
                 <h3>PRODUCT</h3>
               </div>
           </div>
-        </div> 
+        </div>
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
             <div id="youtube">
@@ -238,7 +238,3 @@
 
   </body>
 </html>
-
-
-
-

@@ -1,8 +1,8 @@
 <html>
 <head>
-	<title></title>
+	<title>Description</title>
 	<html lang="en">
-	 
+
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,10 +15,10 @@
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 	    <!-- Latest compiled and minified JavaScript -->
-	    
+
 	    <link rel="icon" href="../../favicon.ico">
 
-	 
+
 	    <!-- Bootstrap core CSS -->
 	    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -53,7 +53,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Authentically Ethnic</a>
-          <ul class="nav navbar-nav navbar-left">           
+          <ul class="nav navbar-nav navbar-left">
             <li><a href="#">Orders</a></li>
             <li><a href="#">Products</a></li>
           </ul>
@@ -80,7 +80,7 @@
 			  <option>4($80)</option>
 			</select>
 			<input type='submit' value='Buy'>
-		</form>	
+		</form>
 	</div>
 </body>
 </html>

@@ -16,7 +16,7 @@
 
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Orders</title>
+    <title>Product by Id</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,11 +66,11 @@
     #background
     {
 /*       background-color: white; */
-        
+
     }
       #title
       {
-        text-align: center; 
+        text-align: center;
         font-size: 75px;
     /*  font-family: 'Raleway', sans-serif;*/
         font-family: 'Josefin Slab', serif;
@@ -120,13 +120,13 @@
       <table id="table">
         <tr>
           <th>Product</th>
-          <th>Customer Last Name</th> 
+          <th>Customer Last Name</th>
           <th>Quantity</th>
           <th>Price</th>
         </tr>
         <tr>
           <td>Ceramic Bowl</td>
-          <td>Jackson</td> 
+          <td>Jackson</td>
           <td>94</td>
           <td>$500.00</td>
         </tr>
