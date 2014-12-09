@@ -58,7 +58,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav navbar-right">
-						<a class="navbar-brand" href="#">Shopping Cart()</a>
+						<a class="navbar-brand" href="/index.html">Shopping Cart()</a>
         	</ul>
         </div>
       </div>
@@ -76,7 +76,7 @@
 			</div>
 			<div class="col-sm-6">
 			<p>description of product. description of product. description of product. 				description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. vdescription of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. </p>
-				<form>
+				<form action='/Description/buy' method='post'>
 					<select>
 					  <option>1($20)</option>
 					  <option>2($40)</option>
