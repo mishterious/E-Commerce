@@ -110,12 +110,12 @@
 
 <!--       <div id='signIn' class="container"> -->
         <br>
-        <form class="form-signin" role="form">
+        <form action="admin_login" class="form-signin" role="form" method="post">
           <!-- <h2 class="form-signin-heading">admin access</h2> -->
           <label for="inputEmail" class="sr-only">Email address</label>
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          <input type="email" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required>
           <div class="checkbox">
             <label>
               <input type="checkbox" value="remember-me"> Remember me

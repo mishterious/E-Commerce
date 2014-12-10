@@ -90,14 +90,14 @@
 		<div id="bodyelement" class='container'>
 			<div class="row">
 			   <div class="col-sm-12 .col-sm-offset-2 col-md-12 .col-md-offset-2 sidebar">
-				<form id = "edit_product" role="form">
+				<form action = "edit_product_by_id" id = "edit_product" role="form" method="post">
 				  <div class="form-group">
-				    <label>Name</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
+				    <label><?= $product['name'] ?></label>
+				    <input type="text" name ="product_name" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
 				  </div>
 				  <div class="form-group">
 				    <label>Description</label>
-				    <textarea class="form-control" rows="3"></textarea>
+				    <textarea class="form-control" name="description" rows="3"></textarea>
 				  </div>
 					<select>
 					  <option value="volvo">Shirt</option>
@@ -107,14 +107,21 @@
 					</select>
 					<div class="form-group">
 					  <label for="exampleInputEmail1">Add a new category</label>
-					  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="New Category">
+					  <input type="text" name="new_category" class="form-control" id="exampleInputEmail1" placeholder="New Category">
+					</div>
+					<div class="form-group">
+					  <label>Images</label>
+					  <input type="text" name ="picture1" class="form-control" id="exampleInputEmail1" placeholder="Add/Update Picture">					
+					  <input type="text" name ="picture2" class="form-control" id="exampleInputEmail1" placeholder="Add/Update Picture">
+					  <input type="text" name ="picture3" class="form-control" id="exampleInputEmail1" placeholder="Add/Update Picture">
 					</div>
 					<div class="checkbox">
 					    <label>
 					      <input type="checkbox"> Check me out
 					    </label>
 				  	</div>
-				  <button type="submit" class="btn btn-default">Submit</button>
+				  	<button type="submit" name ="submit" class="btn btn-default">Submit</button>
+				  	<input type="hidden" name="product_id" value= <?= $product['id'] ?>>
 				</form>
 			  </div>
 			</div>

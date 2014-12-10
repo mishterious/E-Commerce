@@ -10,9 +10,9 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>Dashboard Template for Bootstrap</title>
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
 
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
@@ -55,11 +55,15 @@
         height: 1000px;
       }
 
+      #dropdown{
+      position:relative;
+      }
+
 
     </style>
   </head>
   <body>
-    <script src="https:www//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
     <nav id = "topbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -71,13 +75,13 @@
           </button>
           <a class="navbar-brand" href="#">Authentically Ethnic</a>
           <ul class="nav navbar-nav navbar-left">           
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="process/orders">Orders</a></li>
+            <li><a href="inventory">Products</a></li>
           </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Log Off</a></li>
+            <li><a href="process/logoff">Log Off</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -104,55 +108,55 @@
                 <td>Date</td>
                 <td>Billing Address</td>
                 <td>Total</td>
-                <td>Status</td>
+                <td>Order Status</td>
+                <td>Update</td>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>100</td>
-                <td>Chris</td>
-                <td>9/6/14</td>
-                <td>499 Fairchild Dr. Mountain View, CA 95123</td>
-                <td>$192.00</td>
-                <td>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                    <li role="presentation" class="dropdown-header">Dropdown header</li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Order in Process</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cancelled</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>92</td>
-                <td>Christos</td>
-                <td>9/6/14</td>
-                <td>499 Fairchild Dr. Mountain View, CA 95123</td>
-                <td>$192.00</td>
-                <td>Status</td>
-              </tr>
-              <tr>
-                <td>267</td>
-                <td>Adam</td>
-                <td>9/6/14</td>
-                <td>499 Fairchild Dr. Mountain View, CA 95123</td>
-                <td>$192.00</td>
-                <td>Status</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>Mish</td>
-                <td>9/6/14</td>
-                <td>499 Fairchild Dr. Mountain View, CA 95123</td>
-                <td>$192.00</td>
-                <td>Status</td>
-              </tr>
+              <?php
+                foreach($orders as $order)
+                { ?>
+                  <form action="update_status" class="form-signin" role="form" method="post">
+                    <tr>
+                      <td><a href=""></a><?= $order['id'] ?></td>
+                      <td><?= $order['first_name'] ?></td>
+                      <td><?= $order['created_at'] ?></td>
+                      <td><?= $order['bill_addr1'] ?><?= $order['bill_addr2'] ?><?= $order['bill_city'] ?><?= $order['bill_state'] ?><?= $order['bill_zip'] ?></td>
+                      <td><?= $order['total'] ?></td>
+                      <td> 
+                        <select name="status" id="status">
+                          <option value="" disabled selected>Select Order Status</option>
+                          <option value="Order in Process">Order in Process</option>
+                          <option value="Shipped">Shipped</option>
+                          <option value="Cancelled">Cancelled</option>
+                          <option value="Delivered">Delivered</option>
+                        </select>
+                      </td>
+                      <td><button class="btn btn-lg btn-warning btn-block" type="submit">Update Order Status</button> <input type="hidden" name="order_id" value= <?= $order['id'] ?>></td>
+                   </tr>
+                  </form>
+                    <?php
+                } ?>          
+<!--                   <div id = "dropdown" class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                      Status
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Order In Process</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shipped</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cancelled</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Delivered</a></li>
+                    </ul>
+                  </div> --> 
             </tbody>
           </table>    
       </div>
           <!-- Bootstrap core JavaScript
           ================================================== -->
           <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </div>
   </body>
 </html>

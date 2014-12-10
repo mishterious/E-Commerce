@@ -44,7 +44,6 @@
 </head>
 <body>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -56,7 +55,7 @@
           </button>
           <a class="navbar-brand" href="#">Authentically Ethnic</a>
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">Orders</a></li>
+            <li><a href="admin_login">Orders</a></li>
             <li><a href="#">Products</a></li>
           </ul>
         </div>
@@ -71,63 +70,44 @@
       </div>
     </nav>
 	<div id='mine' class='container'>
-
 		<table class="table table-condensed">
-			<th>
-				<th>ID</th>
-				<th>Name</th>
-				<th>Count</th>
-				<th>Quantity Sold</th>
-				<th>Action</th>
-			</th>
-			<tr>
-				<td></td>
-				<td>1</td>
-				<td>Shirt</td>
-				<td>34234</td>
-				<td>433453</td>
-				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>2</td>
-				<td>Shirt</td>
-				<td>34234</td>
-				<td>433453</td>
-				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>3</td>
-				<td>Shirt</td>
-				<td>34234</td>
-				<td>433453</td>
-				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>4</td>
-				<td>Shirt</td>
-				<td>34234</td>
-				<td>433453</td>
-				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>4</td>
-				<td>Shirt</td>
-				<td>34234</td>
-				<td>433453</td>
-				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>5</td>
-				<td>Shirt</td>
-				<td>34234</td>
-				<td>433453</td>
-				<td><a href="">Add</a> <a href="">Delete</a></td>
-			</tr>
+			<thead>
+				<tr>
+					<td>Picture</td>
+					<td>ID</td>
+					<td>Name</td>
+					<td>Inventory Count</td>
+					<td>Price</td>
+					<td>Edit</td>
+					<td>Delete</td>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+                foreach($products as $product)
+                { ?>
+                    <tr>
+                      <td><img src="<?= $product['picture1'] ?>"></a></td>
+                      <td><?= $product['id'] ?></td>
+                      <td><?= $product['name'] ?></td>
+                      <td><?= $product['quantity'] ?></td>
+                      <td><?= $product['price'] ?></td>
+                      <td> 
+                      	<form action="edit_product" class="form-signin" role="form" method="post">
+                      		<button class="btn btn-lg btn-warning btn-block" type="submit">Edit</button> 
+                        	<input type="hidden" name="product_id" value= <?= $product['id'] ?>>
+                        </form>
+                      </td>
+                      <td>
+                      	<form action="delete_product" class="form-signin" role="form" method="post"> 
+                      		<button class="btn btn-lg btn-warning btn-block" type="submit">Delete</button> 
+                        	<input type="hidden" name="product_id" value= <?= $product['id'] ?>>
+                    	</form>
+                      </td>
+                   </tr>
+                    <?php
+                } ?>          
+			</tbody>
 		</table>
 		<nav>
 		  <ul class="pagination">
