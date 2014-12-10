@@ -38,7 +38,7 @@
 
     	}
     	#info{
-			    		
+
     	}
     </style>
 </head>
@@ -55,7 +55,7 @@
 	            <span class="icon-bar"></span>
 	          </button>
 	          <a class="navbar-brand" href="#">Authentically Ethnic</a>
-	          <ul class="nav navbar-nav navbar-left">           
+	          <ul class="nav navbar-nav navbar-left">
 	            <li><a href="#">Orders</a></li>
 	            <li><a href="#">Products</a></li>
 	          </ul>
@@ -71,7 +71,7 @@
 	      </div>
 	    </nav>
 		<div id='mine' class='container'>
-			<h3>User Cart</h3>	
+			<h3>User Cart</h3>
 
 			<table class="table table-condensed">
 				<th>
@@ -115,109 +115,105 @@
 			</table>
 			<div id='info'>
 				<h4>Shipping Information</h4><br>
-								</div>	
-			<form class="form-horizontal" role="form">
-			  
+			</div>
+			<form class="form-horizontal" action='/process/cart' method='post' role="form">
+
 			  <div class="form-group">
 			    <label for="inputtext3" class="col-sm-2 control-label">First Name</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
+			      <input type="text" name="s_first" class="form-control" id="first_name">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label for="inputtext3" class="col-sm-2 control-label">Last Name</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
+			      <input type="text" name="s_last" class="form-control" id="inputtext3">
 			    </div>
 			  </div><div class="form-group">
 			    <label for="inputtext3" class="col-sm-2 control-label">Address</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
+			      <input type="text" name="s_addr1" class="form-control" id="inputtext3">
 			    </div>
 			  </div><div class="form-group">
 			    <label for="inputtext3" class="col-sm-2 control-label">Address 2</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
+			      <input type="text" name="s_addr2" class="form-control" id="inputtext3">
 			    </div>
 			  </div><div class="form-group">
 			    <label for="inputtext3" class="col-sm-2 control-label">City</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
+			      <input type="text" name="s_city" class="form-control" id="inputtext3">
 			    </div>
 			  </div><div class="form-group">
 			    <label for="inputtext3" class="col-sm-2 control-label">Zipcode</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
+			      <input type="text" name="s_zip" class="form-control" id="inputtext3">
 			    </div>
 			  </div>
-			</form>  
+    			<h4>Billing Information</h4><br>
+    			  <div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">First Name</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="b_first" class="form-control" id="inputtext3">
+    			    </div>
+    			  </div>
+    			  <div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Last Name</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="b_last" class="form-control" id="inputtext3">
+    			    </div>
+    			  </div>
 
-			<h4>Billing Information</h4><br>
-				
-			<form class="form-horizontal" role="form">
-			  
-			  <div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">First Name</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Last Name</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			  </div>
+    			  <div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Address</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="b_addr1" class="form-control" id="inputtext3">
+    			    </div>
+    			  </div>
 
-			  <div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Address</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			  </div>
+    			  <div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Address 2</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="b_addr2" class="form-control" id="inputtext3">
+    			    </div>
+    			  </div>
 
-			  <div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Address 2</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			  </div>
+    			  <div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">City</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="b_city" class="form-control" id="inputtext3">
+    			    </div>
+    			  </div>
 
-			  <div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">City</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			  </div>
+    			  <div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Zipcode</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="b_zip" class="form-control" id="inputtext3">
+    			    </div>
+    			  </div>
 
-			  <div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Zipcode</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			  </div>
+    			<div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Credit Card Number</label>
+    			    <div class="col-sm-10">
+    			      <input type="text" name="card_number" class="form-control" id="inputtext3">
+    			    </div>
+    			</div>
 
-			<div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Credit Card Number</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" id="inputtext3">
-			    </div>
-			</div>   
+    			<div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Security Code</label>
+    			    <div class="col-sm-10">
+    			      <input type="password" name="card_sec" class="form-control" id="inputtext3">
+    			    </div>
+    			</div>
 
-			<div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Security Code</label>
-			    <div class="col-sm-10">
-			      <input type="password" class="form-control" id="inputtext3">
+    			<div class="form-group">
+    			    <label for="inputtext3" class="col-sm-2 control-label">Expiration</label>
+    			    <div class="col-sm-10">
+    			      <input type="date" name="card_exp" class="form-control" id="inputtext3">
+                  <button type="submit" class="btn btn-default">Sign in</button>
 			    </div>
 			</div>
-
-			<div class="form-group">
-			    <label for="inputtext3" class="col-sm-2 control-label">Expiration</label>
-			    <div class="col-sm-10">
-			      <input type="date" class="form-control" id="inputtext3">
-			    </div>
-			</div>    
 		</form>
-			 
+
 </body>
 </html>

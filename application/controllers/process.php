@@ -14,6 +14,11 @@ class Process extends CI_Controller {
 	}
 	public function cart()
 	{
+		// var_dump("hello");
+
+		$tmp = $this->input->post();
+		var_dump($tmp);
+		die();
 		$this->load->view('user_cart');
 	}
 }
