@@ -38,6 +38,9 @@
 	    	#product{
 	    		margin-top: 50px;
 	    	}
+	    	#thatOne{
+	    		width:400px;
+	    	}
 	    </style>
 </head>
 
@@ -63,23 +66,23 @@
         </div>
       </div>
   </nav>
-		<a class="navbar-brand" href="#">Go Back</a>
-	<div id='product' class='container'>
-		<div class = "row">
-			<div class="col-sm-12">
-				<h2>Product Name</h2>
-			</div>
-			<div class="col-sm-6">
-				<h5>Insert Picture Here</h5>
-			</div>
-			<div class="col-sm-6">
-			<p>description of product. description of product. description of product. 				description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. vdescription of product. description of product. description of product. description of product. description of product. description of product. description of product. description of product. </p>
+		<a class="navbar-brand" href="/process/index">Go Back</a>
+			<div id='product' class='container'>
+				<div class = "row">
+					<div class="col-sm-6">
+						<h2><?=$id['name']?></h2>
+						<div class="col-sm-6">
+							<img id='thatOne' src="<?=$id['picture1']?>"> 
+						</div>
+					</div>
+					<div class="col-sm-6">
+					<p><?=$id['description']?></p>
 				<form action='/process/cart' method='post'>
 					<select>
-					  <option>1($20)</option>
-					  <option>2($40)</option>
-					  <option>3($60)</option>
-					  <option>4($80)</option>
+					  <option>1($(<?=$id['price']?>)</option>
+					  <option>2($<?=$id['price']*2?>)</option>
+					  <option>3($<?=$id['price']*3?>)</option>
+					  <option>4($<?=$id['price']*4?>)</option>
 					</select>
 					<input type='submit' value='Buy'>
 				</form>

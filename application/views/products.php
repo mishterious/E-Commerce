@@ -163,77 +163,18 @@
 		  		</div>
  				</div>
 
-        <div class="thumbnail">
-         <div class="caption">
-             <a href="/process/description"><h3>PRODUCT</h3></a> 
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-                <!--    <img data-src="holder.js/300x300" alt="...">
--->         <div class="caption">
-              <h3>PRODUCT</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-             <!--       <img data-src="holder.js/300x300" alt="..."> -->
-              <div class="caption">
-                <h3>PRODUCT</h3>
-              </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <!--       <img data-src="holder.js/300x300" alt="..."> -->
-              <div class="caption">
-                <h3>PRODUCT</h3>
-              </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div id="youtube">
-             <!--    <img data-src="holder.js/300x300" alt="...">
-        -->   <div class="caption">
-                <h3>PRODUCT</h3>
-              </div>
-             </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-        <!--      <img data-src="holder.js/300x300" alt="...">
-  -->       <div class="caption">
-              <h3>PRODUCT</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-      <!--      <img data-src="holder.js/300x300" alt="...">
-    -->       <div class="caption">
-                <h3>PRODUCT</h3>
-              </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-      <!--      <img data-src="holder.js/300x300" alt="...">
-  -->       <div class="caption">
-              <h3>PRODUCT</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-      <!--      <img data-src="holder.js/300x300" alt="...">
- -->        <div class="caption">
-              <h3>PRODUCT</h3>
-            </div>
-          </div>
-        </div>
+<?php       foreach ($products as $key) {                
+?>              <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                             <a href="/process/description/<?=$key['id']?>"><img class='thatImg' src="<?=$key['picture1']?>"></a>
+                              <h3><?=$key['name']?></h3>
+                            </div>
+                          </div>
+                        </div>  
+<?php        }  
+?>   
+                      
 
   </body>
 </html>

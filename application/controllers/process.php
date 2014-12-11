@@ -8,33 +8,12 @@ class Process extends CI_Controller {
 		$array['products'] = $this->E_model->get_all_products();
 		$this->load->view('products', $array);
 	}
-	public function description()
+	public function description($id)
 	{
-		$this->load->view('description');
-	}
-	public function cart()
-	{
-		// var_dump("hello");
+		$this->load->model('E_model'); 
+		$array['id'] = $this->E_model->get_product_by_id($id); 
 
-		$tmp = $this->input->post();
-		var_dump($tmp);
-		die();
-		$this->load->view('user_cart');
-	}
-
-	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-class Process extends CI_Controller {
-
-	public function index()
-	{
-		$this->load->model('E_model');
-		$array['products'] = $this->E_model->get_all_products();
-		$this->load->view('products', $array);
-	}
-	public function description()
-	{
-		$this->load->view('description');
+		$this->load->view('description', $array);
 	}
 	public function cart()
 	{
@@ -45,6 +24,22 @@ class Process extends CI_Controller {
 	{
 		$id = $this->input->post();
 	}
+	public function send_product($id)
+	{
+		$this->load->model('E_model'); 
+		$send['buy'] = $this->E_model->get_product_by_id($id);
+		$this->load->view('user_cart', $send);
+	}
+	
+
+
+
+
+
+
+
+
+
 
 	public function login()
 	{
