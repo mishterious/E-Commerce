@@ -76,7 +76,7 @@
 						</div>
 					</div>
 					<div class="col-sm-6">
-					<p><?=$id['description']?></p>
+					<h4><?=$id['description']?></h4>
 				<form action='/process/cart' method='post'>
 					<select>
 					  <option>1($(<?=$id['price']?>)</option>

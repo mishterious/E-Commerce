@@ -129,6 +129,14 @@
     width: 120px;
   }
 
+  #pic{
+    width: 300px;
+    height: 300px;
+    max-height: 40%;
+    max-width: 40%;
+
+  }
+
  	</style>
 
 
@@ -137,11 +145,11 @@
   	<div id="wrapper">
         <nav class="navbar navbar-default" role="navigation">
            <div class="navbar-header">
-              <a class="navbar-brand" href="#">Login</a>
+              <a class="navbar-brand" href="/process/login">Login</a>
            </div>
            <div>
               <ul class="nav navbar-nav">
-                 <li class="active"><a href="#">cart</a></li>
+                 <li class="active"><a href="/process/cart">cart</a></li>
               </ul>
            </div>
         </nav>
@@ -150,11 +158,11 @@
         <br>
         <div id = "menu" class="container-fluid">
           <div class="col-sm-3 col-md-2 sidebar">
+            <h3>Categories</h3>
             <ul class="nav nav-sidebar">
-              <li id="link" class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-              <li id="link"><a href="#">Inventory</a></li>
-              <li id="link"><a href="#">Analytics</a></li>
-              <li id="link"><a href="#">Reports</a></li>
+              <li id="link" class="active"><a href="#">Swords <span class="sr-only">(current)</span></a></li>
+              <li id="link"><a href="#">Halberd</a></li>
+              <li id="link"><a href="#">Spear</a></li>
             </ul>
           </div>
         </div>
@@ -164,7 +172,7 @@
  				</div>
 
 <?php       foreach ($products as $key) {                
-?>              <div class="col-sm-6 col-md-4">
+?>              <div id = "pic" class="col-sm-6 col-md-4">
                           <div class="thumbnail">
                             <div class="caption">
                              <a href="/process/description/<?=$key['id']?>"><img class='thatImg' src="<?=$key['picture1']?>"></a>
