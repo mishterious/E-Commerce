@@ -11,6 +11,14 @@ class E_model extends CI_Model {
    {
    		return $this->db->query("SELECT * FROM products WHERE id = ?", $id)->row_array();
    }
+   function get_distinct_category()
+   {
+      return $this->db->query("SELECT DISTINCT category FROM products")->result_array();
+   }
+   function get_product_by_category($category)
+   {
+      return $this->db->query("SELECT * FROM products WHERE category = ?", $category)->result_array();
+   }
 
    function get_admin_by_email($email)
    { 

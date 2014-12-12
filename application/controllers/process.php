@@ -5,6 +5,7 @@ class Process extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('E_model');
+		$array['name'] = $this->E_model->get_distinct_category();
 		$array['products'] = $this->E_model->get_all_products();
 		$this->load->view('products', $array);
 	}
@@ -24,11 +25,12 @@ class Process extends CI_Controller {
 	{
 		$id = $this->input->post();
 	}
-	public function send_product($id)
+	public function send_product($category)
 	{
 		$this->load->model('E_model'); 
-		$send['buy'] = $this->E_model->get_product_by_id($id);
-		$this->load->view('user_cart', $send);
+		$array['name'] = $this->E_model->get_distinct_category();
+		$array['products'] = $this->E_model->get_product_by_category($category);
+		$this->load->view( 'products', $array);	
 	}
 	
 

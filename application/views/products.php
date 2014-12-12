@@ -142,6 +142,7 @@
 
   </head>
   <body>
+
   	<div id="wrapper">
         <nav class="navbar navbar-default" role="navigation">
            <div class="navbar-header">
@@ -160,9 +161,12 @@
           <div class="col-sm-3 col-md-2 sidebar">
             <h3>Categories</h3>
             <ul class="nav nav-sidebar">
-              <li id="link" class="active"><a href="#">Swords <span class="sr-only">(current)</span></a></li>
-              <li id="link"><a href="#">Halberd</a></li>
-              <li id="link"><a href="#">Spear</a></li>
+<?php         foreach ($name as $key) {
+      
+?>               <li id="link"><a href="/process/send_product/<?=$key['category']?>"><?=$key['category']?></a></li>
+                 
+<?php          }
+?>
             </ul>
           </div>
         </div>
@@ -171,7 +175,7 @@
 		  		</div>
  				</div>
 
-<?php       foreach ($products as $key) {                
+<?php       foreach ($products as $key){                
 ?>              <div id = "pic" class="col-sm-6 col-md-4">
                           <div class="thumbnail">
                             <div class="caption">
