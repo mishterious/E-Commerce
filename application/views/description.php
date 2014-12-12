@@ -76,15 +76,16 @@
 						</div>
 					</div>
 					<div class="col-sm-6">
-					<h4><?=$id['description']?></h4>
+					<p><?=$id['description']?></p>
 				<form action='/process/cart' method='post'>
-					<select>
-					  <option>1($(<?=$id['price']?>)</option>
-					  <option>2($<?=$id['price']*2?>)</option>
-					  <option>3($<?=$id['price']*3?>)</option>
-					  <option>4($<?=$id['price']*4?>)</option>
+					<select name="quantity">
+					  <option value="1">1 ($<?=$id['price']?>) </option>
+					  <option value="2">2 ($<?=$id['price']*2?>)</option>
+					  <option value="3">3 ($<?=$id['price']*3?>)</option>
+					  <option value="4">4 ($<?=$id['price']*4?>)</option>
 					</select>
-					<input type='submit' value='Buy'>
+					<input type='submit' name='submit' value='Buy'>
+					<input type='hidden' name='hidden' value='<?=$id['id']?>'>
 				</form>
 			</div>
 			<div class = "col-sm-12">

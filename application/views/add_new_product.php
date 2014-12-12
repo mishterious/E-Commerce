@@ -72,13 +72,13 @@
 			      </button>
 			      <a class="navbar-brand" href="/process/dashboard">Authentically Ethnic</a>
 			      <ul class="nav navbar-nav navbar-left">
-			      	<li><a href="/process/dashboard">Dashboard</a></li>
-			      	<li><a href="/process/inventory">Products</a></li>
+			        <li><a href="/process/dashboard">Dashboard</a></li>
+			        <li><a href="/process/inventory">Products</a></li>
 			      </ul>
 			    </div>
 			    <div id="navbar" class="navbar navbar-default collapse">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="process/logout">Log Off</a></li>
+			        <li><a href="#">Log Off</a></li>
 			      </ul>
 			      <form class="navbar-form navbar-right">
 			        <input type="text" class="form-control" placeholder="Search...">
@@ -90,23 +90,31 @@
 		<div id="bodyelement" class='container'>
 			<div class="row">
 			   <div class="col-sm-12 .col-sm-offset-2 col-md-12 .col-md-offset-2 sidebar">
-				<form action = "edit_product_by_id" id = "edit_product" role="form" method="post">
+				<form action = "add_new_product" id = "edit_product" role="form" method="post">
 				  <div class="form-group">
-				    <label><?= $product['name'] ?></label>
+				    <label>Product Name</label>
 				    <input type="text" name ="product_name" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
 				  </div>
 				  <div class="form-group">
 				    <label>Description</label>
 				    <textarea class="form-control" name="description" rows="3"></textarea>
 				  </div>
-					<select>						
-						<option value="" disabled selected>Select Order Status</option>
-						<?php 
-						foreach($categories as $category)
-						{ ?>
-						 <option value="<?= $category['category']?>"><?= $category['category'] ?></option>
-						<?php 
-						}  ?>
+				  <div class="form-group">
+				    <label>Quantity in Inventory</label>
+				    <input type="text" name ="quantity" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
+				  </div>
+				  <div class="form-group">
+				    <label>Price per Unit</label>
+				    <input type="text" name ="price" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
+				  </div>
+					<select>					
+					  	<option value="" disabled selected>Select Order Status</option>
+					  	<?php 
+					  	foreach($categories as $category)
+					  	{ ?>
+					  	 <option value="<?= $category['category']?>"><?= $category['category'] ?></option>
+					  	<?php 
+					  	}  ?>
 					</select>
 					<div class="form-group">
 					  <label for="exampleInputEmail1">Add a new category</label>
@@ -124,7 +132,6 @@
 					    </label>
 				  	</div>
 				  	<button type="submit" name ="submit" class="btn btn-default">Submit</button>
-				  	<input type="hidden" name="product_id" value= <?= $product['id'] ?>>
 				</form>
 			  </div>
 			</div>

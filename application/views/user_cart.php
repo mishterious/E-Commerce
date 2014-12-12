@@ -35,7 +35,6 @@
     <style type="text/css">
     	#mine{
     		margin-top: 100px;
-
     	}
     	#info{
 
@@ -72,47 +71,30 @@
 	    </nav>
 		<div id='mine' class='container'>
 			<h3>User Cart</h3>
-
 			<table class="table table-condensed">
-				<th>
-					<th>Item</th>
-					<th>Price</th>
-					<th>Quantity</th>
-					<th>Total</th>
-				</th>
-				<tr>
-					<td></td>
-					<td>Black Belt</td>
-					<td>$34.45</td>
-					<td>1 <a href="">update</a></td>
-					<td>$34.45</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>Black Belt</td>
-					<td>$34.45</td>
-					<td>1 <a href="">update</a></td>
-					<td>$34.45</td>
-				</tr><tr>
-					<td></td>
-					<td>Black Belt</td>
-					<td>$34.45</td>
-					<td>1 <a href="">update</a></td>
-					<td>$34.45</td>
-				</tr><tr>
-					<td></td>
-					<td>Black Belt</td>
-					<td>$34.45</td>
-					<td>1 <a href="">update</a></td>
-					<td>$34.45</td>
-				</tr><tr>
-					<td></td>
-					<td>Black Belt</td>
-					<td>$34.45</td>
-					<td>1 <a href="">update</a></td>
-					<td>$34.45</td>
-				</tr>
+				<thead>
+					<tr>
+						<td>Item</td>
+						<td>Price</td>
+						<td>Quantity</td>
+						<td>Total</td>
+					</tr>
+				</thead>
+				<?php
+				$cart = $this->session->userdata('cart');
+				foreach($cart as $product)
+				{ ?>
+					<tr>
+						<td><?= $product['name']?></td>
+						<td>$<?= $product['price']?></td>
+						<td><?= $product['quantity']?></td>
+						<td>$<?= $product['total']?></td>
+					</tr> <?php
+				} ?>
 			</table>
+			<form action = "/process/index" name ="button">
+				<button class="btn btn-lg btn-warning btn-block" type="submit">Continue Shopping</button>
+			</form>
 			<div id='info'>
 				<h4>Shipping Information</h4><br>
 			</div>
@@ -213,6 +195,9 @@
                   <button type="submit" class="btn btn-default">Sign in</button>
 			    </div>
 			</div>
+		</form>
+		<form action = "/process/buy" name ="button">
+			<button class="btn btn-lg btn-warning btn-block" type="submit">Buy</button>
 		</form>
 
 </body>

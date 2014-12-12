@@ -73,15 +73,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Authentically Ethnic</a>
+          <a class="navbar-brand" href="/process/dashboard">Authentically Ethnic</a>
           <ul class="nav navbar-nav navbar-left">           
-            <li><a href="process/orders">Orders</a></li>
-            <li><a href="inventory">Products</a></li>
+            <li><a href="/process/dashboard">Dashboard</a></li>
+            <li><a href="/process/inventory">Products</a></li>
           </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="process/logoff">Log Off</a></li>
+            <li><a href="process/logout">Log Off</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -118,7 +118,10 @@
                 { ?>
                   <form action="update_status" class="form-signin" role="form" method="post">
                     <tr>
-                      <td><a href=""></a><?= $order['id'] ?></td>
+                      <td>
+                        <form action="order_by_product" method="post"><a href="/process/order_by_product"><?= $order['id'] ?></a>
+                        <input type="hidden" name="order_id" value= <?= $order['id'] ?>></form>
+                      </td>
                       <td><?= $order['first_name'] ?></td>
                       <td><?= $order['created_at'] ?></td>
                       <td><?= $order['bill_addr1'] ?><?= $order['bill_addr2'] ?><?= $order['bill_city'] ?><?= $order['bill_state'] ?><?= $order['bill_zip'] ?></td>
@@ -132,7 +135,7 @@
                           <option value="Delivered">Delivered</option>
                         </select>
                       </td>
-                      <td><button class="btn btn-lg btn-warning btn-block" type="submit">Update Order Status</button> <input type="hidden" name="order_id" value= <?= $order['id'] ?>></td>
+                      <td><button class="btn btn-lg btn-warning btn-block" type="submit">Update Order Status</button><input type="hidden" name="order_id" value= <?= $order['id'] ?>></td>
                    </tr>
                   </form>
                     <?php

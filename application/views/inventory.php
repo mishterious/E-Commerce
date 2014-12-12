@@ -1,7 +1,7 @@
 <html>
 <head>
-	<title></title>
-	<html lang="en">
+  <title></title>
+  <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,15 +36,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-    	#mine{
-    		margin-top: 100px;
+      #mine{
+        margin-top: 100px;
 
-    	}
+      }
     </style>
 </head>
 <body>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,37 +53,43 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Authentically Ethnic</a>
+          <a class="navbar-brand" href="/process/dashboard">Authentically Ethnic</a>
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="admin_login">Orders</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="/process/dashboard">Dashboard</a></li>
+            <li><a href="/process/inventory">Products</a></li>
           </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Log Off</a></li>
+            <li><a href="process/logout">Log Off</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
           </form>
         </div>
       </div>
-    </nav>
-	<div id='mine' class='container'>
-		<table class="table table-condensed">
-			<thead>
-				<tr>
-					<td>Picture</td>
-					<td>ID</td>
-					<td>Name</td>
-					<td>Inventory Count</td>
-					<td>Price</td>
-					<td>Edit</td>
-					<td>Delete</td>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
+  </nav>
+  <div id='add_new' class='container'>
+    <form action="add_product" class="form-signin" role="form" method="post">
+      <h3>Add NEW PRODUCT</h3>
+        <button class="btn btn-lg btn-warning btn-block" type="submit">Add New Product</button> 
+    </form>
+  </div>
+  <div id='mine' class='container'>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <td>Picture</td>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Inventory Count</td>
+          <td>Price</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
                 foreach($products as $product)
                 { ?>
                     <tr>
@@ -93,33 +99,33 @@
                       <td><?= $product['quantity'] ?></td>
                       <td><?= $product['price'] ?></td>
                       <td> 
-                      	<form action="edit_product" class="form-signin" role="form" method="post">
-                      		<button class="btn btn-lg btn-warning btn-block" type="submit">Edit</button> 
-                        	<input type="hidden" name="product_id" value= <?= $product['id'] ?>>
+                        <form action="edit_product" class="form-signin" role="form" method="post">
+                          <button class="btn btn-lg btn-warning btn-block" type="submit">Edit</button> 
+                          <input type="hidden" name="product_id" value= <?= $product['id'] ?>>
                         </form>
                       </td>
                       <td>
-                      	<form action="delete_product" class="form-signin" role="form" method="post"> 
-                      		<button class="btn btn-lg btn-warning btn-block" type="submit">Delete</button> 
-                        	<input type="hidden" name="product_id" value= <?= $product['id'] ?>>
-                    	</form>
+                        <form action="delete_product" class="form-signin" role="form" method="post"> 
+                          <button class="btn btn-lg btn-warning btn-block" type="submit">Delete</button> 
+                          <input type="hidden" name="product_id" value= <?= $product['id'] ?>>
+                      </form>
                       </td>
                    </tr>
                     <?php
                 } ?>          
-			</tbody>
-		</table>
-		<nav>
-		  <ul class="pagination">
-		    <li><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-		    <li><a href="#">1</a></li>
-		    <li><a href="#">2</a></li>
-		    <li><a href="#">3</a></li>
-		    <li><a href="#">4</a></li>
-		    <li><a href="#">5</a></li>
-		    <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
-		  </ul>
-		</nav>
-	</div>
+      </tbody>
+    </table>
+    <nav>
+      <ul class="pagination">
+        <li><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+      </ul>
+    </nav>
+  </div>
 </body>
 </html>
