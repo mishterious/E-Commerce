@@ -62,7 +62,32 @@ class Process extends CI_Controller {
 		$this->load->view( 'products', $array);	
 	}
 
+	public function sign_in()
+	{
+		$this->load->model('E_model');
 
+		$addr_info = array(
+			'f_name' => $this->input->post('s_first'),
+			'l_name' => $this->input->post('s_last'),	
+			'ship_addr1' => $this->input->post('s_addr1'),	
+			'ship_addr2' => $this->input->post('s_addr2'),	
+			'ship_city' => $this->input->post('s_city'),
+			'ship_state' => $this->input->post('s_state'),	
+			'ship_zip' => $this->input->post('s_zip'),	
+			'bill_fname' => $this->input->post('b_first'),
+			'bill_lname' => $this->input->post('b_last'),	
+			'bill_addr1' => $this->input->post('b_addr1'),	
+			'bill_addr2' => $this->input->post('b_addr2'),	
+			'bill_city' => $this->input->post('b_city'),
+			'bill_state' => $this->input->post('b_state'),	
+			'bill_zip' => $this->input->post('b_zip')
+		);
+
+		$add_addr_info = $this->E_model->add_addr_info($addr_info);
+		redirect('/');
+
+	
+	}
 
 
 

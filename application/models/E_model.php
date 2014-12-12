@@ -30,6 +30,12 @@ class E_model extends CI_Model {
        return $this->db->query("SELECT * FROM orders")->result_array();
    }
    
+   function add_addr_info($addr)
+   {
+      $query= "INSERT INTO addresses(f_name, l_name, ship_addr1, ship_addr2, ship_city, ship_state, ship_zip, bill_fname, bill_lname, bill_addr1, bill_addr2, bill_city, bill_state, bill_zip) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      $values= array($addr['f_name'], $addr['l_name'], $addr['ship_addr1'], $addr['ship_addr2'], $addr['ship_city'], $addr['ship_state'], $addr['ship_zip'], $addr['bill_fname'], $addr['bill_lname'], $addr['bill_addr1'], $addr['bill_addr2'], $addr['bill_city'], $addr['bill_state'], $addr['bill_zip']);
+      return $this->db->query($query, $values);
+   }
    // function get_order_info()
    // {
    //      return $this->db->query("SELECT customers.first_name, orders.id, orders.orders.total, orders.status, orders.created_at, addresses.ship_addr1, addresses.ship_addr2, addresses.ship_city, addresses.ship_state, addresses.bill_zip, addresses.bill_addr1, addresses.bill_addr2, addresses.bill_city, addresses.bill_state, addresses.bill_zip FROM addresses JOIN customers ON addresses.customers_id = customers.id JOIN orders ON orders.customers_id = customers.id")->result_array();
